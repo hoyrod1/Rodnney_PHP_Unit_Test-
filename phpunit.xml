@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true" bootstrap="vendor/autoload.php" printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer">
+    <logging>
+        <testdoxHtml outputFile="tests/log/testdox.html"/>
+        <text outputFile="tests/log/logfile.txt"/>
+    </logging>
+</phpunit>

@@ -1,0 +1,1 @@
+{"version":1,"defects":{"ListingImageTest::testNoImage":4,"ListingImageTest::testFullPathImage":4,"ListingImageTest::testBuildPathImage":4},"times":{"ListingImageTest::testNoImage":0.002,"ListingImageTest::testFullPathImage":0.002,"ListingImageTest::testBuildPathImage":0.001}}
