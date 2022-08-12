@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'b98b278bba3dd1be2ac7fb33948ac958f6df0008',
+        'reference' => 'fd5abf8204c80e9162c03e10be605c4559364715',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -25,7 +25,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'b98b278bba3dd1be2ac7fb33948ac958f6df0008',
+            'reference' => 'fd5abf8204c80e9162c03e10be605c4559364715',
             'dev_requirement' => false,
         ),
         'codedungeon/php-cli-colors' => array(

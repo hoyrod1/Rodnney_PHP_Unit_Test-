@@ -4,13 +4,41 @@ use PHPUnit\Framework\TestCase;
 
 class ListingBasicTest extends TestCase
 {
-    // /** @test */
-    // public function exceptionReturnAsExpected(): void
-    // {
-    //     $exceptionTest = new LightBasic();
+    protected $data = [];
 
-    //     $this->expectException(InvalidArgumentException::class);
-    // }
+    /** @test */
+    public function exceptionReturnAsExpectedMessageForUnavailableData(): void
+    {
+
+        $this->expectExceptionMessage('Unable to create a listing, data unavailable');
+
+        $exceptionTest = new ListingBasic();
+
+    }
+ 
+    /** @test */
+    public function exceptionReturnAsExpectedMessageForInvaildId(): void
+    {
+
+
+        $this->expectExceptionMessage('Unable to create a listing, invalid id');
+
+        $this->data = ['title' => 'Test Exception'];
+        $exceptionTest = new ListingBasic($this->data);
+
+    }  
+    
+    /** @test */
+    public function exceptionReturnAsExpectedMessageForInvaildTitle(): void
+    {
+
+
+        $this->expectExceptionMessage('Unable to create a listing, invalid title');
+
+        $this->data = ['id' => 1];
+        $exceptionTest = new ListingBasic($this->data);
+
+    }      
 
     // /** @test */
     // public function objectCreatedWithValidAurguments()
@@ -18,90 +46,90 @@ class ListingBasicTest extends TestCase
     //     $data = ["1", "First Test"];
     //     $ListingBasic = new ListingBasic();
         
-    //     $this->assertInstanceOf('LightBasic', $ListingBasic);
+    //     $this->assertInstanceOf('ListingBasic', $ListingBasic);
     // }
     
     /** @test */
-    public function getStatusIsBasic()
-    {
-        $expectedResults = 'basic';
+    // public function getStatusIsBasic()
+    // {
+    //     $expectedResults = 'basic';
 
-        $ListingBasic = new ListingBasic();
+    //     $ListingBasic = new ListingBasic();
         
-        $results = $ListingBasic->getStatus();
+    //     $results = $ListingBasic->getStatus();
 
-        $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
-    }
-
-        /** @test */
-        public function getMethodReturnId()
-        {
-            $expectedResults = 'id';
-    
-            $ListingBasic = new ListingBasic();
-            
-            $results = $ListingBasic->getId();
-    
-            $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
-        }
+    //     $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
+    // }
 
         /** @test */
-        public function getMethodReturnTitle()
-        {
-            $expectedResults = 'Title';
+        // public function getMethodReturnId()
+        // {
+        //     $expectedResults = 'id';
     
-            $ListingBasic = new ListingBasic();
+        //     $ListingBasic = new ListingBasic();
             
-            $results = $ListingBasic->getTitle();
+        //     $results = $ListingBasic->getId();
     
-            $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
-        }
+        //     $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
+        // }
 
         /** @test */
-        public function getMethodReturnWebsite()
-        {
-            $expectedResults = 'website';
+        // public function getMethodReturnTitle()
+        // {
+        //     $expectedResults = 'Title';
     
-            $ListingBasic = new ListingBasic();
+        //     $ListingBasic = new ListingBasic();
             
-            $results = $ListingBasic->getWebsite();
+        //     $results = $ListingBasic->getTitle();
     
-            $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
-        }
+        //     $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
+        // }
+
+        /** @test */
+        // public function getMethodReturnWebsite()
+        // {
+        //     $expectedResults = 'website';
+    
+        //     $ListingBasic = new ListingBasic();
+            
+        //     $results = $ListingBasic->getWebsite();
+    
+        //     $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
+        // }
  
          /** @test */
-         public function getMethodReturnEmail()
-         {
-             $expectedResults = 'basic';
+        //  public function getMethodReturnEmail()
+        //  {
+        //      $expectedResults = 'basic';
      
-             $ListingBasic = new ListingBasic();
+        //      $ListingBasic = new ListingBasic();
              
-             $results = $ListingBasic->getEmail();
+        //      $results = $ListingBasic->getEmail();
      
-             $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
-         } 
+        //      $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
+        //  } 
          
         /** @test */
-        public function getMethodReturnTwitter()
-        {
-            $expectedResults = 'basic';
+        // public function getMethodReturnTwitter()
+        // {
+        //     $expectedResults = 'basic';
     
-            $ListingBasic = new ListingBasic();
+        //     $ListingBasic = new ListingBasic();
             
-            $results = $ListingBasic->getTwitter();
+        //     $results = $ListingBasic->getTwitter();
     
-            $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
-        }   
+        //     $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
+        // }   
         
          /** @test */
-         public function getToArrayMethodReturnArray()
-         {
+        //  public function getToArrayMethodReturnArray()
+        //  {
      
-             $ListingBasic = new ListingBasic();
+        //      $ListingBasic = new ListingBasic();
              
-             $results = $ListingBasic->toArray();
+        //      $results = $ListingBasic->toArray();
      
-             $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
-         }          
+        //      $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
+        //  }          
     
 }
