@@ -40,14 +40,14 @@ class ListingBasicTest extends TestCase
 
     }      
 
-    // /** @test */
-    // public function objectCreatedWithValidAurguments()
-    // {
-    //     $data = ["1", "First Test"];
-    //     $ListingBasic = new ListingBasic();
+    /** @test */
+    public function objectCreatedWithValidAurguments()
+    {
+        $this->data = ['id' => "1", "title" => "First Test"];
+        $ListingBasic = new ListingBasic($this->data);
         
-    //     $this->assertInstanceOf('ListingBasic', $ListingBasic);
-    // }
+        $this->assertInstanceOf('ListingBasic', $ListingBasic);
+    }
     
     /** @test */
     // public function getStatusIsBasic()

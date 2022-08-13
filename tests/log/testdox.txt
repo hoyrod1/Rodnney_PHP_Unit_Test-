@@ -1,5 +1,3 @@
 Listing Basic
- [x] Exception return as expected message for unavailable data
- [x] Exception return as expected message for invaild id
- [x] Exception return as expected message for invaild title
+ [x] Object created with valid aurguments
 
