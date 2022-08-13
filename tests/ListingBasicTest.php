@@ -6,60 +6,60 @@ class ListingBasicTest extends TestCase
 {
     protected $data = [];
 
-    /** @test */
-    public function exceptionReturnAsExpectedMessageForUnavailableData(): void
-    {
+    // /** @test */
+    // public function exceptionReturnAsExpectedMessageForUnavailableData(): void
+    // {
 
-        $this->expectExceptionMessage('Unable to create a listing, data unavailable');
+    //     $this->expectExceptionMessage('Unable to create a listing, data unavailable');
 
-        $exceptionTest = new ListingBasic();
+    //     $exceptionTest = new ListingBasic();
 
-    }
+    // }
  
-    /** @test */
-    public function exceptionReturnAsExpectedMessageForInvaildId(): void
-    {
+    // /** @test */
+    // public function exceptionReturnAsExpectedMessageForInvaildId(): void
+    // {
 
 
-        $this->expectExceptionMessage('Unable to create a listing, invalid id');
+    //     $this->expectExceptionMessage('Unable to create a listing, invalid id');
 
-        $this->data = ['title' => 'Test Exception'];
-        $exceptionTest = new ListingBasic($this->data);
+    //     $this->data = ['title' => 'Test Exception'];
+    //     $exceptionTest = new ListingBasic($this->data);
 
-    }  
+    // }  
+    
+    // /** @test */
+    // public function exceptionReturnAsExpectedMessageForInvaildTitle(): void
+    // {
+
+
+    //     $this->expectExceptionMessage('Unable to create a listing, invalid title');
+
+    //     $this->data = ['id' => 1];
+    //     $exceptionTest = new ListingBasic($this->data);
+
+    // }      
+
+    // /** @test */
+    // public function objectCreatedWithValidAurguments()
+    // {
+    //     $this->data = ['id' => "1", "title" => "First Test"];
+    //     $ListingBasic = new ListingBasic($this->data);
+        
+    //     $this->assertInstanceOf('ListingBasic', $ListingBasic);
+    // }
     
     /** @test */
-    public function exceptionReturnAsExpectedMessageForInvaildTitle(): void
+    public function getStatusIsBasic()
     {
-
-
-        $this->expectExceptionMessage('Unable to create a listing, invalid title');
-
-        $this->data = ['id' => 1];
-        $exceptionTest = new ListingBasic($this->data);
-
-    }      
-
-    /** @test */
-    public function objectCreatedWithValidAurguments()
-    {
+        $expectedResults = 'basic';
         $this->data = ['id' => "1", "title" => "First Test"];
         $ListingBasic = new ListingBasic($this->data);
         
-        $this->assertInstanceOf('ListingBasic', $ListingBasic);
+        $results = $ListingBasic->getStatus();
+
+        $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
     }
-    
-    /** @test */
-    // public function getStatusIsBasic()
-    // {
-    //     $expectedResults = 'basic';
-
-    //     $ListingBasic = new ListingBasic();
-        
-    //     $results = $ListingBasic->getStatus();
-
-    //     $this->assertEquals($expectedResults, $results, "The getStatus method does not return basic");
-    // }
 
         /** @test */
         // public function getMethodReturnId()
