@@ -1,9 +1,4 @@
-Listing Basic
- [x] Get status is basic
- [x] Get method return id
- [x] Get method return title
- [x] Get method return website
- [x] Get method return email
- [x] Get method return twitter
- [x] Get to array method return array
+Listing Premium
+ [x] Get status premium
+ [x] Get description returns expected results
 
