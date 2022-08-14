@@ -98,7 +98,7 @@ class ListingBasic
      */
     public function setWebsite($value)
     {
-        $value = trim(filter_var($value, FILTER_SANITIZE_STRING));
+        $value = trim(htmlspecialchars($value));
         if (empty($value)) {
             $this->website = null;
             return;
@@ -124,7 +124,7 @@ class ListingBasic
      */
     public function setEmail($value)
     {
-        $this->email = trim(filter_var($value, FILTER_SANITIZE_STRING));
+        $this->email = trim(htmlspecialchars($value));
     }
 
     /**
@@ -142,7 +142,7 @@ class ListingBasic
      */
     public function setTwitter($value)
     {
-        $this->twitter = str_replace('@', '', trim(filter_var($value, FILTER_SANITIZE_STRING)));
+        $this->twitter = str_replace('@', '', trim(htmlspecialchars($value)));
     }
 
     /**
@@ -164,7 +164,7 @@ class ListingBasic
             $this->status = 'basic';
             return;
         }
-        $this->status = trim(filter_var($value, FILTER_SANITIZE_STRING));
+        $this->status = trim(htmlspecialchars($value));
     }
 
     /**
