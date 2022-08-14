@@ -45,9 +45,9 @@ class ListingPremiumTest extends TestCase
 
         $this->listingPremium = new ListingPremium($this->data);
         
-        $results = $this->listingPremium->getDescription();
+        $this->results = $this->listingPremium->getDescription();
 
-        $this->assertEquals($expectedResults, $results, "The getDescription method does not return expected description");
+        $this->assertEquals($expectedResults, $this->results, "The getDescription method does not return expected description");
     }  
     
     
