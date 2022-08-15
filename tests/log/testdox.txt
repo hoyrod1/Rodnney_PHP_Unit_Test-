@@ -1,4 +1,5 @@
-Listing Featured
- [x] Get status featured
- [x] Ge coc returns expected results
+Listing Image
+ [x] No image
+ [x] Full path image
+ [x] Build path image
 

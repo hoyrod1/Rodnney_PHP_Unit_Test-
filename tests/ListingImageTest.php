@@ -11,6 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 class ListingImageTest extends TestCase
 {
+    // /** @test */
     public function testNoImage()
     {
         $data = [
@@ -22,6 +23,8 @@ class ListingImageTest extends TestCase
         $this->assertFalse($listing->getImage());
 
     }
+
+    // /** @test */
     public function testFullPathImage()
     {
         $data = [
@@ -31,8 +34,9 @@ class ListingImageTest extends TestCase
         ];
         $listing = new ListingBasic($data);
         $this->assertEquals($data['image'], $listing->getImage());
-
     }
+
+    /** @test */
     public function testBuildPathImage()
     {
         define('BASE_URL', '/');
@@ -42,6 +46,6 @@ class ListingImageTest extends TestCase
             'image' => 'images/listings/1.png',
         ];
         $listing = new ListingBasic($data);
-        $this->assertEquals(BASE_URL.'/'.$data['image'], $listing->getImage());
+        $this->assertEquals(BASE_URL . '/' .$data['image'], $listing->getImage());
     }
 }

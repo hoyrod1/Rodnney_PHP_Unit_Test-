@@ -2,7 +2,7 @@
 
 class ListingBasic
 {
-    private $id, $title, $website, $email, $twitter;
+    private $id, $title, $website, $email, $twitter, $image;
     protected $status = 'basic';
 
     /**
@@ -166,6 +166,43 @@ class ListingBasic
         }
         $this->status = trim(htmlspecialchars($value));
     }
+
+    /**
+     * Gets the local property $image
+     * @return string
+     */
+    public function getImage()
+    {
+        if (!empty($this->image)) 
+        {
+            return $this->image;
+        }else
+        {
+            return false;
+        }
+        
+    }
+
+    /**
+     * Cleans up and sets the local property $status
+     * @param string $value to set property
+     */
+    public function setImage($value)
+    {
+        $this->image = trim(htmlspecialchars($value));
+        if (empty($this->image)) 
+        {
+            $this->image = null;
+            return;
+        }
+        if (substr($value, 0, 4) != 'http') 
+        {
+            $value = BASE_URL . '/' . $value;
+        }
+
+        $this->image = $value;
+    }
+
 
     /**
      * Convert the current object to an associative array of parameters

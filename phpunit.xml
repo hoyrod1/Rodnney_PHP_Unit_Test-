@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit colors="true" bootstrap="vendor/autoload.php" printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer">
 
-    <!-- <coverage cacheDirectory="/path/to/directory" includeUncoveredFiles="true" processUncoveredFiles="true" pathCoverage="false" ignoreDeprecatedCodeUnits="true" disableCodeCoverageIgnore="true">
+    <coverage cacheDirectory="/path/to/directory" includeUncoveredFiles="true" processUncoveredFiles="true" pathCoverage="false" ignoreDeprecatedCodeUnits="true" disableCodeCoverageIgnore="true">
         <directory suffix=".php">classes</directory>
-    </coverage> -->
+    </coverage>
 
-    <!-- <filter>
+    <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">classes</directory>
         </whitelist>
-    </filter> -->
+    </filter>
 
     <logging>
-        <!-- <log type="coverage-html" target="tests/log/report" lowUpperBound="35" highLowerBound="70"/>
-        <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>    -->
+        <log type="coverage-html" target="tests/log/report" lowUpperBound="35" highLowerBound="70"/>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>   
         <testdoxText outputFile="tests/log/testdox.txt"/>
         <testdoxHtml outputFile="tests/log/testdox.html"/>
-        <!-- <text outputFile="tests/log/logfile.txt"/> -->
+        <text outputFile="tests/log/logfile.txt"/>
     </logging>
 
 </phpunit>
