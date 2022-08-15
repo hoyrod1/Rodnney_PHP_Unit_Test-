@@ -1,4 +1,4 @@
-Listing Premium
- [x] Get status premium
- [x] Get description returns expected results
+Listing Featured
+ [x] Get status featured
+ [x] Ge coc returns expected results
 
